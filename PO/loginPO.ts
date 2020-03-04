@@ -1,7 +1,9 @@
 import { element ,by} from "protractor";
 
 export class loginPO{
-    public static loginEmail=element(by.css("#email-input"))
-    public static loginPassword=element(by.css("#password-input"))
-    public static loginButton=element(by.xpath("//input[@id='login-button']"))
+    public static emailAddTxtBx = element(by.id("login-input"))
+   public static pwdTxtBx = element(by.id("password-input"))
+   public static contButton = element(by.id("continue-login-button"))
+   public static forgetPwdLnk = element(by.xpath("//a[text()='Forgot Password?']"))
+   public static loginButton = element(by.id("main-login-button"))
 }

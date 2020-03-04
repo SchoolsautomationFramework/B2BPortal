@@ -1,7 +1,7 @@
 import { element ,by} from "protractor";
 
 import { RandomStringGeneratorUtil } from "../Util/RandomStringGeneratorUtil";
-export class b2cSearchForExamsPO
+export class b2bCandidateRegistrationPO
 {
     public static awardingBody=element(by.css("#awardingBody"))
     public static session=element(by.css("#session"))

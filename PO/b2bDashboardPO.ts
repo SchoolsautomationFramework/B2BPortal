@@ -1,7 +1,6 @@
 import { element ,by} from "protractor";
 
 import { RandomStringGeneratorUtil } from "../Util/RandomStringGeneratorUtil";
-export class b2cExamBasketPO
+export class b2bDashboardPO
 {
-    public static registerAndPayNowBtn=element(by.xpath("//button[@id='register-button']"))
 }

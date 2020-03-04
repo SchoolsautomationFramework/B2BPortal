@@ -1,13 +1,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var loginPO_1 = require("../PO/loginPO");
+var waitStatementUtil_1 = require("../Util/waitStatementUtil");
 var loginLib = /** @class */ (function () {
     function loginLib() {
     }
     loginLib.prototype.userLogin = function () {
-        loginPO_1.loginPO.loginEmail.sendKeys("qab2c@test.com");
-        loginPO_1.loginPO.loginPassword.sendKeys("Password1");
         loginPO_1.loginPO.loginButton.click();
+        //browser.sleep(10000)
+        waitStatementUtil_1.waitStatementUtil.customWait2();
+        loginPO_1.loginPO.emailAddTxtBx.sendKeys("qa@test.com");
+        waitStatementUtil_1.waitStatementUtil.customWait1();
+        loginPO_1.loginPO.pwdTxtBx.sendKeys("Test@123");
+        waitStatementUtil_1.waitStatementUtil.customWait1();
+        loginPO_1.loginPO.contButton.click();
+        // browser.sleep(10000)
+        waitStatementUtil_1.waitStatementUtil.customWait2();
     };
     return loginLib;
 }());

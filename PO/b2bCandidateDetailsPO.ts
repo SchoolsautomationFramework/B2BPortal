@@ -1,5 +1,5 @@
 import { element ,by} from "protractor";
-export class b2cCandidateDetailsPO
+export class b2bCandidateDetailsPO
 {
 
 public static titledrpdwn=element(by.css("#title-select > a"))

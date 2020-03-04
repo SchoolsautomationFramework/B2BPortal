@@ -1,14 +1,23 @@
 import { RandomStringGeneratorUtil } from "../Util/RandomStringGeneratorUtil";
 import {loginPO}from "../PO/loginPO";
 import { browser } from "protractor";
-
+import { waitStatementUtil } from "../Util/waitStatementUtil";
 export class loginLib
 {
+
     public userLogin()
     {
-        loginPO.loginEmail.sendKeys("qab2c@test.com");
-        loginPO.loginPassword.sendKeys("Password1");
         loginPO.loginButton.click();
+        //browser.sleep(10000)
+        waitStatementUtil.customWait2()
+       
+       loginPO.emailAddTxtBx.sendKeys("qa@test.com")
+     waitStatementUtil.customWait1()
+       loginPO.pwdTxtBx.sendKeys("Test@123")
+       waitStatementUtil.customWait1()
+       loginPO.contButton.click();
+      // browser.sleep(10000)
+      waitStatementUtil.customWait2()
       
         
 
