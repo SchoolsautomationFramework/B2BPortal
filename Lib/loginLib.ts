@@ -8,7 +8,7 @@ export class loginLib
     public userLogin()
     {
         loginPO.loginButton.click();
-        //browser.sleep(10000)
+       
         waitStatementUtil.customWait2()
        
        loginPO.emailAddTxtBx.sendKeys("qa@test.com")
@@ -16,7 +16,7 @@ export class loginLib
        loginPO.pwdTxtBx.sendKeys("Test@123")
        waitStatementUtil.customWait1()
        loginPO.contButton.click();
-      // browser.sleep(10000)
+     
       waitStatementUtil.customWait2()
       
         

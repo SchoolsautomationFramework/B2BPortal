@@ -30,7 +30,7 @@ browser.get("https://qa-schoolexamsportal-uat.britishcouncil.org/")
   waitStatementUtil.implicitWait()
 
   Loginlib.userLogin()
-  waitStatementUtil.customWait2()
+  waitStatementUtil.customWait1()
 
   waitStatementUtil.implicitWait()
     }
@@ -41,17 +41,49 @@ browser.get("https://qa-schoolexamsportal-uat.britishcouncil.org/")
 
   
 
-  // describe("User will select  date and country", function()
-  // {
-  //     let b2BDashboardLib = new b2bDashboardLib()
-  //     preConditionUtil.setSyncTimeoutConfig()
-  //     waitStatementUtil.implicitWait()
-  //     it("session, date and country selection", function()
-  //     {
-   
-  //     }
-  //     )
+  describe("User will select  date and country", function()
+  {
+      let b2BDashboardLib = new b2bDashboardLib()
+      preConditionUtil.setSyncTimeoutConfig()
+      waitStatementUtil.implicitWait()
+      it("session, date and country selection", function()
+      {
+        b2BDashboardLib.SelectSessionDate()
+        
+  waitStatementUtil.implicitWait()
+      }
+      )
       
-  //   }
-  //   )
+    }
+    )
+    describe("User will click on create registrationButton", function()
+    {
+        let b2BCandidateRegistrationLib = new b2bCandidateRegistrationLib()
+        preConditionUtil.setSyncTimeoutConfig()
+        waitStatementUtil.implicitWait()
+        it("User will click on create registrationButton", function()
+        {
+          b2BCandidateRegistrationLib.ClickOnCreateRegisterationButton()
+          
+    waitStatementUtil.implicitWait()
+        }
+        )
+        
+      }
+      )
 
+    describe("User will create b2bRegistration", function()
+    {
+        let b2BCandidateDetailsLib = new b2bCandidateDetailsLib()
+        preConditionUtil.setSyncTimeoutConfig()
+        waitStatementUtil.implicitWait()
+        it("session, date and country selection", function()
+        {
+          b2BCandidateDetailsLib.candidateDetails()
+          
+    waitStatementUtil.implicitWait()
+        }
+        )
+        
+      }
+      )

@@ -7,14 +7,12 @@ var loginLib = /** @class */ (function () {
     }
     loginLib.prototype.userLogin = function () {
         loginPO_1.loginPO.loginButton.click();
-        //browser.sleep(10000)
         waitStatementUtil_1.waitStatementUtil.customWait2();
         loginPO_1.loginPO.emailAddTxtBx.sendKeys("qa@test.com");
         waitStatementUtil_1.waitStatementUtil.customWait1();
         loginPO_1.loginPO.pwdTxtBx.sendKeys("Test@123");
         waitStatementUtil_1.waitStatementUtil.customWait1();
         loginPO_1.loginPO.contButton.click();
-        // browser.sleep(10000)
         waitStatementUtil_1.waitStatementUtil.customWait2();
     };
     return loginLib;
